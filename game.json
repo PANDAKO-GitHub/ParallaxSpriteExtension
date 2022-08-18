@@ -71,6 +71,24 @@
           "identifier": "https://resources.gdevelop-app.com/assets/Foliage Pack (100 assets)/PNG/Retina/Big tree (4).png",
           "name": "gdevelop-asset-store"
         }
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/alienGreen_climb1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\alienGreen_climb1.png",
+        "smoothed": true,
+        "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/alienGreen_climb2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "assets\\alienGreen_climb2.png",
+        "smoothed": true,
+        "userAdded": true
       }
     ],
     "resourceFolders": []
@@ -102,7 +120,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.6399999999999997,
+        "zoomFactor": 0.8799999999999999,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -119,7 +137,7 @@
           "width": 0,
           "x": 100,
           "y": 100,
-          "zOrder": 100,
+          "zOrder": 1000,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -149,7 +167,7 @@
           "width": 0,
           "x": 300,
           "y": 100,
-          "zOrder": 50,
+          "zOrder": 500,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -162,7 +180,7 @@
           "name": "Comment1",
           "persistentUuid": "23c03c37-87a9-4dc1-9a33-28ccd8a60722",
           "width": 0,
-          "x": 160,
+          "x": 151,
           "y": 520,
           "zOrder": 101,
           "numberProperties": [],
@@ -177,7 +195,7 @@
           "name": "Comment2",
           "persistentUuid": "3d2a3d64-dd0e-42b3-8897-197d9e86101c",
           "width": 0,
-          "x": 370,
+          "x": 360,
           "y": 520,
           "zOrder": 102,
           "numberProperties": [],
@@ -265,7 +283,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Z-Order : 100",
+          "string": "Z-Order : 1000",
           "font": "",
           "characterSize": 20,
           "color": {
@@ -286,7 +304,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Z-Order : 50",
+          "string": "Z-Order : 500",
           "font": "",
           "characterSize": 20,
           "color": {
@@ -393,6 +411,572 @@
       "layers": [
         {
           "ambientLightColorB": 32,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 0,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "ParallaxSprite",
+          "type": "ParallaxSprite::ParallaxSprite"
+        }
+      ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "MoveOfSpriteAndCamera",
+      "name": "MoveOfSpriteAndCamera",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.6599999999999997,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Player",
+          "persistentUuid": "874dea10-548b-4c86-b6d2-a7b6f6a6d8d6",
+          "width": 0,
+          "x": 400,
+          "y": 300,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "name": "Player",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ParallaxSprite",
+              "type": "ParallaxSprite::ParallaxSprite",
+              "X": 0,
+              "Y": 0,
+              "Z": 0,
+              "ZoomRate": 100,
+              "FirstFrame": true,
+              "ScaleFactor": 1
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.25,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\alienGreen_climb1.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 33,
+                        "y": 46
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    },
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "assets\\alienGreen_climb2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 33,
+                        "y": 46
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "aca8b60afd3da4aed122c94935cbeefbd479709d5352d54b414d36427234cc50",
+          "name": "BigTree4",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ParallaxSprite",
+              "type": "ParallaxSprite::ParallaxSprite",
+              "X": 0,
+              "Y": 0,
+              "Z": 0,
+              "ZoomRate": 100,
+              "FirstFrame": true,
+              "ScaleFactor": 1
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.02500000037252903,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Big tree (4).png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Repeat",
+              "repeatExpression": "100",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "BigTree4",
+                    "RandomInRange(-2000, 2000)",
+                    "-70",
+                    "\"\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "BigTree4",
+                    "=",
+                    "RandomInRange(-2000,2000)"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Player",
+          "comment2": ""
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Up"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ParallaxSprite::ParallaxSprite::SetZ"
+              },
+              "parameters": [
+                "Player",
+                "ParallaxSprite",
+                "\"-\"",
+                "100 * TimeDelta()",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Down"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ParallaxSprite::ParallaxSprite::SetZ"
+              },
+              "parameters": [
+                "Player",
+                "ParallaxSprite",
+                "\"+\"",
+                "100 * TimeDelta()",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Left"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ParallaxSprite::ParallaxSprite::SetX"
+              },
+              "parameters": [
+                "Player",
+                "ParallaxSprite",
+                "\"-\"",
+                "100 * TimeDelta()",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "Right"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ParallaxSprite::ParallaxSprite::SetX"
+              },
+              "parameters": [
+                "Player",
+                "ParallaxSprite",
+                "\"+\"",
+                "100 * TimeDelta()",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Camera",
+          "comment2": ""
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "w"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ParallaxSprite::SetCameraZ"
+              },
+              "parameters": [
+                "",
+                "\"-\"",
+                "100 * TimeDelta()",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "s"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ParallaxSprite::SetCameraZ"
+              },
+              "parameters": [
+                "",
+                "\"+\"",
+                "100 * TimeDelta()",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "a"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetCameraCenterX"
+              },
+              "parameters": [
+                "",
+                "-",
+                "100 * TimeDelta()",
+                "\"\"",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "d"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetCameraCenterX"
+              },
+              "parameters": [
+                "",
+                "+",
+                "100 * TimeDelta()",
+                "\"\"",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "q"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetCameraCenterY"
+              },
+              "parameters": [
+                "",
+                "-",
+                "100 * TimeDelta()",
+                "\"\"",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "KeyPressed"
+              },
+              "parameters": [
+                "",
+                "e"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetCameraCenterY"
+              },
+              "parameters": [
+                "",
+                "+",
+                "100 * TimeDelta()",
+                "\"\"",
+                "0"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "DebuggerTools::ConsoleLog"
+              },
+              "parameters": [
+                "ToString(Player.ParallaxSprite::X()) + \"\n\" + ToString(Player.ParallaxSprite::Y()) + \"\n\" + ToString(Player.ParallaxSprite::Z()) + \"\n\" + ToString(Player.ParallaxSprite::ZoomRate())",
+                "",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 0,
           "ambientLightColorG": 0,
           "ambientLightColorR": 0,
           "followBaseLayerCamera": false,
@@ -922,7 +1506,7 @@
       "name": "ParallaxSprite",
       "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Line Hero Pack/Master/SVG/Graphic Design/Graphic Design_layers.svg",
       "shortDescription": "This extension adds a parallax effect to the sprite.",
-      "version": "0.4.1",
+      "version": "0.4.2",
       "tags": [
         "parallax"
       ],
@@ -1071,7 +1655,7 @@
           "objectGroups": []
         },
         {
-          "description": "",
+          "description": "Default : 1000",
           "fullName": "Original Size Z Order",
           "functionType": "Expression",
           "group": "",
@@ -1088,7 +1672,7 @@
                     "value": "SetReturnNumber"
                   },
                   "parameters": [
-                    "100"
+                    "1000"
                   ]
                 }
               ]
@@ -1475,32 +2059,6 @@
                         "Object",
                         "=",
                         "Object.Behavior::Z()"
-                      ]
-                    }
-                  ]
-                },
-                {
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [
-                    {
-                      "type": {
-                        "value": "BuiltinCommonInstructions::CompareNumbers"
-                      },
-                      "parameters": [
-                        "ParallaxSprite::CameraZ() - Object.Behavior::Z()",
-                        "=",
-                        "0"
-                      ]
-                    }
-                  ],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "Delete"
-                      },
-                      "parameters": [
-                        "Object",
-                        "Behavior"
                       ]
                     }
                   ]
