@@ -1,2 +1,2 @@
-# ParallaxSpriteExtension
+# Parallax Sprite Extension for GDevelop
  
