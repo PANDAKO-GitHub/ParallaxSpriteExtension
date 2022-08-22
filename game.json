@@ -17,7 +17,7 @@
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
     "useExternalSourceFiles": false,
-    "version": "1.0.0",
+    "version": "1.1.0",
     "name": "ParallaxSpriteExtensionExample",
     "description": "",
     "author": "PANDAKO",
@@ -89,6 +89,19 @@
         "name": "assets\\alienGreen_climb2.png",
         "smoothed": true,
         "userAdded": true
+      },
+      {
+        "alwaysLoaded": false,
+        "file": "assets/Alternative Small Castle.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Alternative Small Castle.png",
+        "smoothed": true,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://resources.gdevelop-app.com/assets/Generic Backgrounds/Background Objects/Retina/Alternative Small Castle.png",
+          "name": "gdevelop-asset-store"
+        }
       }
     ],
     "resourceFolders": []
@@ -346,7 +359,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "At least one action, condition, or expression must be used to enable the extension.\n",
+          "comment": "At least one action, condition, or expression must be used to enable the extension.\nEffective for other scenes.",
           "comment2": ""
         },
         {
@@ -988,6 +1001,305 @@
           "type": "ParallaxSprite::ParallaxSprite"
         }
       ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "EffectOfScaleFactorProperty",
+      "name": "EffectOfScaleFactorProperty",
+      "oglFOV": 90,
+      "oglZFar": 500,
+      "oglZNear": 1,
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.8999999999999999,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "AlternativeSmallCastle",
+          "persistentUuid": "63d6f411-ea05-4334-9709-4039d08838a6",
+          "width": 0,
+          "x": 400,
+          "y": 500,
+          "zOrder": 0,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "BigTree4",
+          "persistentUuid": "65f5072a-3b68-4878-8158-801045627e70",
+          "width": 0,
+          "x": 590,
+          "y": 500,
+          "zOrder": 500,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "Comment1",
+          "persistentUuid": "1e593ae9-c7ae-4899-83ef-d539aac992de",
+          "width": 0,
+          "x": 50,
+          "y": 515,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "BigTree4",
+          "persistentUuid": "d2abeb9d-2ed9-4a8c-ac13-d8b96c361775",
+          "width": 0,
+          "x": 200,
+          "y": 500,
+          "zOrder": 500,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "BigTree4",
+          "persistentUuid": "5f19ad91-1947-4f52-9061-a37a7edd0a61",
+          "width": 0,
+          "x": 678.5,
+          "y": 500,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "layer": "",
+          "name": "BigTree4",
+          "persistentUuid": "43abf6b4-372e-48de-bc79-e682999181df",
+          "width": 0,
+          "x": 121,
+          "y": 500,
+          "zOrder": 1000,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "8cfbce0b33fa50761dbda22e2105cbe34b110a9253be42d49a365936a204cdc7",
+          "name": "AlternativeSmallCastle",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ParallaxSprite",
+              "type": "ParallaxSprite::ParallaxSprite",
+              "X": 0,
+              "Y": 0,
+              "Z": 0,
+              "ZoomRate": 100,
+              "FirstFrame": true,
+              "ScaleFactor": 3
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.02500000037252903,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Alternative Small Castle.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 108,
+                        "y": 170
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "aca8b60afd3da4aed122c94935cbeefbd479709d5352d54b414d36427234cc50",
+          "name": "BigTree4",
+          "tags": "",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ParallaxSprite",
+              "type": "ParallaxSprite::ParallaxSprite",
+              "X": 0,
+              "Y": 0,
+              "Z": 0,
+              "ZoomRate": 100,
+              "FirstFrame": true,
+              "ScaleFactor": 1
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": true,
+                  "timeBetweenFrames": 0.02500000037252903,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": false,
+                      "image": "Big tree (4).png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 121.5,
+                        "y": 415
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "Comment1",
+          "smoothed": true,
+          "tags": "",
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Effect of Scale Factor Property :\nThis property eliminates the need to prepare a large image for the distant view.\nDon't forget to set the \"Origin\" point to the proper position.",
+          "font": "",
+          "characterSize": 20,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          }
+        }
+      ],
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "DragCameraWithPointer::DragCameraWithPointer"
+              },
+              "parameters": [
+                "",
+                "0",
+                "\"\"",
+                "\"both\"",
+                "Left",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 1,
+          "ambientLightColorG": 0,
+          "ambientLightColorR": 0,
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "name": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": []
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "ParallaxSprite",
+          "type": "ParallaxSprite::ParallaxSprite"
+        }
+      ]
     }
   ],
   "externalEvents": [],
@@ -1490,7 +1802,7 @@
       "name": "ParallaxSprite",
       "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Line Hero Pack/Master/SVG/Graphic Design/Graphic Design_layers.svg",
       "shortDescription": "This extension adds a parallax effect to the sprite.",
-      "version": "0.4.2",
+      "version": "0.4.3",
       "tags": [
         "parallax"
       ],
@@ -1768,11 +2080,11 @@
           "objectGroups": []
         },
         {
-          "description": "Sets the vector ([x,y,z]) to the specified scene variable.",
-          "fullName": "VectorToPoint",
+          "description": "Returns the direction vector from A to B.\nSets the vector ([x,y,z]) to the specified scene variable.",
+          "fullName": "Direction vector",
           "functionType": "Action",
           "group": "",
-          "name": "VectorToPoint",
+          "name": "DirectionVector",
           "private": false,
           "sentence": "Vector To Point From (_PARAM1_ , _PARAM2_ , _PARAM3_) To (_PARAM4_ , _PARAM5_ , _PARAM6_) in _PARAM7_",
           "events": [
