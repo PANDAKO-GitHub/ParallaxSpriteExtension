@@ -17,3 +17,10 @@ By doing so, we will be able to submit this extension to GDevelop.
 
 **A1** : No.  
 This extension does not support camera rotation. The reason is that enabling rotation makes the controls more complex and increases the load.
+
+## Release notes
+### v0.5.0
+- Add ParallaxShapePainter Behavior.
+- Reset the camera position when the scene starts.
+- Use Accurate Z Depth.
+- Added "ParallaxShapePainter" and "PlatformerExample" examples.
