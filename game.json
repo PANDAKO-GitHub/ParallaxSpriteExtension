@@ -17,7 +17,7 @@
     "sizeOnStartupMode": "adaptWidth",
     "templateSlug": "",
     "useExternalSourceFiles": false,
-    "version": "1.2.0",
+    "version": "1.2.1",
     "name": "ParallaxSpriteExtensionExample",
     "description": "",
     "author": "PANDAKO",
@@ -1521,30 +1521,37 @@
                         "ParallaxShapePainter",
                         ""
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "ParallaxSprite::ParallaxShapePainter::SetDrawPoints"
-                      },
-                      "parameters": [
-                        "NewShapePainter",
-                        "ParallaxShapePainter",
-                        "\"[\n{\\\"X\\\": -100, \\\"Y\\\": 0, \\\"Z\\\": -100},\n{\\\"X\\\": 100, \\\"Y\\\": 0, \\\"Z\\\": -100},\n{\\\"X\\\": 100, \\\"Y\\\": 0, \\\"Z\\\": 100},\n{\\\"X\\\": -100, \\\"Y\\\": 0, \\\"Z\\\": 100}\n]\"",
-                        ""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ModVarScene"
-                      },
-                      "parameters": [
-                        "Column",
-                        "+",
-                        "1"
-                      ]
                     }
                   ],
                   "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::CompareNumbers"
+                          },
+                          "parameters": [
+                            "mod(Variable(Column) + Variable(Row), 2)",
+                            "!=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ParallaxSprite::ParallaxShapePainter::SetDrawPoints"
+                          },
+                          "parameters": [
+                            "NewShapePainter",
+                            "ParallaxShapePainter",
+                            "\"[\n[\n{\\\"X\\\": -100, \\\"Y\\\": 0, \\\"Z\\\": -100, \\\"C\\\": \\\"46;179;81\\\"},\n{\\\"X\\\": 100, \\\"Y\\\": 0, \\\"Z\\\": -100},\n{\\\"X\\\": 100, \\\"Y\\\": 0, \\\"Z\\\": 100},\n{\\\"X\\\": -100, \\\"Y\\\": 0, \\\"Z\\\": 100}\n]\n]\"",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
@@ -1562,11 +1569,29 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "PrimitiveDrawing::FillColor"
+                            "value": "ParallaxSprite::ParallaxShapePainter::SetDrawPoints"
                           },
                           "parameters": [
                             "NewShapePainter",
-                            "\"201;180;115\""
+                            "ParallaxShapePainter",
+                            "\"[\n[\n{\\\"X\\\": -100, \\\"Y\\\": 0, \\\"Z\\\": -100, \\\"C\\\": \\\"201;180;115\\\"},\n{\\\"X\\\": 100, \\\"Y\\\": 0, \\\"Z\\\": -100},\n{\\\"X\\\": 100, \\\"Y\\\": 0, \\\"Z\\\": 100},\n{\\\"X\\\": -100, \\\"Y\\\": 0, \\\"Z\\\": 100}\n]\n]\"",
+                            ""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarScene"
+                          },
+                          "parameters": [
+                            "Column",
+                            "+",
+                            "1"
                           ]
                         }
                       ]
@@ -2397,7 +2422,7 @@
                       "parameters": [
                         "PlatformDepth",
                         "ParallaxShapePainter",
-                        "\"[\n{\\\"X\\\":-35, \\\"Y\\\":0, \\\"Z\\\":35},\n{\\\"X\\\":-35, \\\"Y\\\":0, \\\"Z\\\":-35},\n{\\\"X\\\":35, \\\"Y\\\":0, \\\"Z\\\":-35},\n{\\\"X\\\":35, \\\"Y\\\":0, \\\"Z\\\":35}\n]\"",
+                        "\"[[\n{\\\"X\\\":-35, \\\"Y\\\":0, \\\"Z\\\":35, \\\"C\\\":\\\"147;219;36\\\"},\n{\\\"X\\\":-35, \\\"Y\\\":0, \\\"Z\\\":-35},\n{\\\"X\\\":35, \\\"Y\\\":0, \\\"Z\\\":-35},\n{\\\"X\\\":35, \\\"Y\\\":0, \\\"Z\\\":35}\n]]\"",
                         ""
                       ]
                     }
@@ -2431,21 +2456,12 @@
                     },
                     {
                       "type": {
-                        "value": "PrimitiveDrawing::FillColor"
-                      },
-                      "parameters": [
-                        "PlatformDepth",
-                        "\"197;143;92\""
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "ParallaxSprite::ParallaxShapePainter::SetDrawPoints"
                       },
                       "parameters": [
                         "PlatformDepth",
                         "ParallaxShapePainter",
-                        "\"[\n{\\\"X\\\":-35, \\\"Y\\\":0, \\\"Z\\\":35},\n{\\\"X\\\":-35, \\\"Y\\\":0, \\\"Z\\\":-35},\n{\\\"X\\\":35, \\\"Y\\\":0, \\\"Z\\\":-35},\n{\\\"X\\\":35, \\\"Y\\\":0, \\\"Z\\\":35}\n]\"",
+                        "\"[[\n{\\\"X\\\":-35, \\\"Y\\\":0, \\\"Z\\\":35, \\\"C\\\":\\\"197;143;92\\\"},\n{\\\"X\\\":-35, \\\"Y\\\":0, \\\"Z\\\":-35},\n{\\\"X\\\":35, \\\"Y\\\":0, \\\"Z\\\":-35},\n{\\\"X\\\":35, \\\"Y\\\":0, \\\"Z\\\":35}\n]]\"",
                         ""
                       ]
                     }
@@ -2479,21 +2495,12 @@
                     },
                     {
                       "type": {
-                        "value": "PrimitiveDrawing::FillColor"
-                      },
-                      "parameters": [
-                        "PlatformDepth",
-                        "\"201;152;105\""
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "ParallaxSprite::ParallaxShapePainter::SetDrawPoints"
                       },
                       "parameters": [
                         "PlatformDepth",
                         "ParallaxShapePainter",
-                        "\"[\n{\\\"X\\\":0, \\\"Y\\\":-35, \\\"Z\\\":35},\n{\\\"X\\\":0, \\\"Y\\\":-35, \\\"Z\\\":-35},\n{\\\"X\\\":0, \\\"Y\\\":35, \\\"Z\\\":-35},\n{\\\"X\\\":0, \\\"Y\\\":35, \\\"Z\\\":35}\n]\"",
+                        "\"[[\n{\\\"X\\\":0, \\\"Y\\\":-35, \\\"Z\\\":35, \\\"C\\\":\\\"201;152;105\\\"},\n{\\\"X\\\":0, \\\"Y\\\":-35, \\\"Z\\\":-35},\n{\\\"X\\\":0, \\\"Y\\\":35, \\\"Z\\\":-35},\n{\\\"X\\\":0, \\\"Y\\\":35, \\\"Z\\\":35}\n]]\"",
                         ""
                       ]
                     }
@@ -2527,21 +2534,12 @@
                     },
                     {
                       "type": {
-                        "value": "PrimitiveDrawing::FillColor"
-                      },
-                      "parameters": [
-                        "PlatformDepth",
-                        "\"201;152;105\""
-                      ]
-                    },
-                    {
-                      "type": {
                         "value": "ParallaxSprite::ParallaxShapePainter::SetDrawPoints"
                       },
                       "parameters": [
                         "PlatformDepth",
                         "ParallaxShapePainter",
-                        "\"[\n{\\\"X\\\":0, \\\"Y\\\":-35, \\\"Z\\\":35},\n{\\\"X\\\":0, \\\"Y\\\":-35, \\\"Z\\\":-35},\n{\\\"X\\\":0, \\\"Y\\\":35, \\\"Z\\\":-35},\n{\\\"X\\\":0, \\\"Y\\\":35, \\\"Z\\\":35}\n]\"",
+                        "\"[[\n{\\\"X\\\":0, \\\"Y\\\":-35, \\\"Z\\\":35, \\\"C\\\":\\\"201;152;105\\\"},\n{\\\"X\\\":0, \\\"Y\\\":-35, \\\"Z\\\":-35},\n{\\\"X\\\":0, \\\"Y\\\":35, \\\"Z\\\":-35},\n{\\\"X\\\":0, \\\"Y\\\":35, \\\"Z\\\":35}\n]]\"",
                         ""
                       ]
                     }
@@ -3378,7 +3376,7 @@
       "name": "ParallaxSprite",
       "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Line Hero Pack/Master/SVG/Graphic Design/Graphic Design_layers.svg",
       "shortDescription": "This extension adds a parallax effect to the sprite.",
-      "version": "0.5.0",
+      "version": "0.6.0",
       "tags": [
         "parallax"
       ],
@@ -6458,7 +6456,7 @@
                       },
                       "parameters": [
                         "Object",
-                        "__ParallaxShapePainter.DrawCounter",
+                        "__ParallaxShapePainter.DrawCounterGroup",
                         "=",
                         "0"
                       ]
@@ -6466,7 +6464,6 @@
                   ]
                 },
                 {
-                  "folded": true,
                   "type": "BuiltinCommonInstructions::Repeat",
                   "repeatExpression": "Object.VariableChildCount(__ParallaxShapePainter.DrawPoints)",
                   "conditions": [],
@@ -6477,87 +6474,133 @@
                       },
                       "parameters": [
                         "Object",
-                        "__ParallaxShapePainter.TemporaryX",
+                        "__ParallaxShapePainter.DrawCounterNumber",
                         "=",
-                        "Object. Behavior::PropertyX() + Object.Variable(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounter)].X)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Object",
-                        "__ParallaxShapePainter.TemporaryY",
-                        "=",
-                        "Object. Behavior::PropertyY() + Object.Variable(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounter)].Y)"
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "ModVarObjet"
-                      },
-                      "parameters": [
-                        "Object",
-                        "__ParallaxShapePainter.TemporaryZ",
-                        "=",
-                        "Object. Behavior::PropertyZ() + Object.Variable(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounter)].Z)"
+                        "0"
                       ]
                     }
                   ],
                   "events": [
                     {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                      "type": "BuiltinCommonInstructions::Repeat",
+                      "repeatExpression": "Object.VariableChildCount(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounterGroup)])",
+                      "conditions": [],
+                      "actions": [
                         {
                           "type": {
-                            "value": "VarObjet"
+                            "value": "ModVarObjet"
                           },
                           "parameters": [
                             "Object",
-                            "__ParallaxShapePainter.DrawCounter",
+                            "__ParallaxShapePainter.TemporaryX",
                             "=",
-                            "0"
+                            "Object. Behavior::PropertyX() + Object.Variable(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounterGroup)][Object.Variable(__ParallaxShapePainter.DrawCounterNumber)].X)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Object",
+                            "__ParallaxShapePainter.TemporaryY",
+                            "=",
+                            "Object. Behavior::PropertyY() + Object.Variable(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounterGroup)][Object.Variable(__ParallaxShapePainter.DrawCounterNumber)].Y)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Object",
+                            "__ParallaxShapePainter.TemporaryZ",
+                            "=",
+                            "Object. Behavior::PropertyZ() + Object.Variable(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounterGroup)][Object.Variable(__ParallaxShapePainter.DrawCounterNumber)].Z)"
                           ]
                         }
                       ],
-                      "actions": [
+                      "events": [
                         {
-                          "type": {
-                            "value": "PrimitiveDrawing::BeginFillPath"
-                          },
-                          "parameters": [
-                            "Object",
-                            "ParallaxSprite::ProjectionX(Object.Variable(__ParallaxShapePainter.TemporaryX), Object.Variable(__ParallaxShapePainter.TemporaryY), Object.Variable(__ParallaxShapePainter.TemporaryZ))",
-                            "ParallaxSprite::ProjectionY(Object.Variable(__ParallaxShapePainter.TemporaryX), Object.Variable(__ParallaxShapePainter.TemporaryY), Object.Variable(__ParallaxShapePainter.TemporaryZ))"
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "Object",
+                                "__ParallaxShapePainter.DrawCounterNumber",
+                                "=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PrimitiveDrawing::FillColor"
+                              },
+                              "parameters": [
+                                "Object",
+                                "Object.VariableString(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounterGroup)][Object.Variable(__ParallaxShapePainter.DrawCounterNumber)].C)"
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PrimitiveDrawing::BeginFillPath"
+                              },
+                              "parameters": [
+                                "Object",
+                                "ParallaxSprite::ProjectionX(Object.Variable(__ParallaxShapePainter.TemporaryX), Object.Variable(__ParallaxShapePainter.TemporaryY), Object.Variable(__ParallaxShapePainter.TemporaryZ))",
+                                "ParallaxSprite::ProjectionY(Object.Variable(__ParallaxShapePainter.TemporaryX), Object.Variable(__ParallaxShapePainter.TemporaryY), Object.Variable(__ParallaxShapePainter.TemporaryZ))"
+                              ]
+                            }
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
+                        },
                         {
-                          "type": {
-                            "value": "VarObjet"
-                          },
-                          "parameters": [
-                            "Object",
-                            "__ParallaxShapePainter.DrawCounter",
-                            "!=",
-                            "0"
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "VarObjet"
+                              },
+                              "parameters": [
+                                "Object",
+                                "__ParallaxShapePainter.DrawCounterNumber",
+                                "!=",
+                                "0"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "PrimitiveDrawing::PathLineTo"
+                              },
+                              "parameters": [
+                                "Object",
+                                "ParallaxSprite::ProjectionX(Object.Variable(__ParallaxShapePainter.TemporaryX), Object.Variable(__ParallaxShapePainter.TemporaryY), Object.Variable(__ParallaxShapePainter.TemporaryZ))",
+                                "ParallaxSprite::ProjectionY(Object.Variable(__ParallaxShapePainter.TemporaryX), Object.Variable(__ParallaxShapePainter.TemporaryY), Object.Variable(__ParallaxShapePainter.TemporaryZ))"
+                              ]
+                            }
                           ]
-                        }
-                      ],
-                      "actions": [
+                        },
                         {
-                          "type": {
-                            "value": "PrimitiveDrawing::PathLineTo"
-                          },
-                          "parameters": [
-                            "Object",
-                            "ParallaxSprite::ProjectionX(Object.Variable(__ParallaxShapePainter.TemporaryX), Object.Variable(__ParallaxShapePainter.TemporaryY), Object.Variable(__ParallaxShapePainter.TemporaryZ))",
-                            "ParallaxSprite::ProjectionY(Object.Variable(__ParallaxShapePainter.TemporaryX), Object.Variable(__ParallaxShapePainter.TemporaryY), Object.Variable(__ParallaxShapePainter.TemporaryZ))"
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "ModVarObjet"
+                              },
+                              "parameters": [
+                                "Object",
+                                "__ParallaxShapePainter.DrawCounterNumber",
+                                "+",
+                                "1"
+                              ]
+                            }
                           ]
                         }
                       ]
@@ -6572,7 +6615,7 @@
                           },
                           "parameters": [
                             "Object",
-                            "__ParallaxShapePainter.DrawCounter",
+                            "__ParallaxShapePainter.DrawCounterGroup",
                             "+",
                             "1"
                           ]
@@ -8327,7 +8370,7 @@
               "objectGroups": []
             },
             {
-              "description": "Set relative coordinates based on the object's position.\nJSON example :\n\"[\n{\\\"X\\\":-10, \\\"Y\\\":-10 , \\\"Z\\\":0},\n{\\\"X\\\":10, \\\"Y\\\":-10 , \\\"Z\\\":0},\n{\\\"X\\\":10, \\\"Y\\\":10 , \\\"Z\\\":0},\n{\\\"X\\\":-10, \\\"Y\\\":10 , \\\"Z\\\":0}\n]\"",
+              "description": "Set relative coordinates based on the object's position.\nJSON example :\n\"[\n[\n{\\\"X\\\":-10, \\\"Y\\\":-10 , \\\"Z\\\":0, \\\"C\\\":\\\"255;255;255\\\"},\n{\\\"X\\\":10, \\\"Y\\\":-10 , \\\"Z\\\":0},\n{\\\"X\\\":10, \\\"Y\\\":10 , \\\"Z\\\":0},\n{\\\"X\\\":-10, \\\"Y\\\":10 , \\\"Z\\\":0}\n]\n]\"",
               "fullName": "Set Draw Points",
               "functionType": "Action",
               "group": "",

@@ -19,6 +19,11 @@ By doing so, we will be able to submit this extension to GDevelop.
 This extension does not support camera rotation. The reason is that enabling rotation makes the controls more complex and increases the load.
 
 ## Release notes
+### v0.6.0
+This version of the "ParallaxShapePainter" behavior is not compatible with previous versions.
+- "ParallaxShapePainter" behavior now supports multiple draws.
+- Revised the "ParallaxShapePainter" and "PlatformerExample" examples.
+
 ### v0.5.0
 - Add ParallaxShapePainter Behavior.
 - Reset the camera position when the scene starts.
