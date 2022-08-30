@@ -2,7 +2,7 @@
 Pre-release.
 
 This extension adds a parallax effect to the sprite.
-This is not Fake 3D. Images cannot be skewed.
+~~This is not Fake 3D.~~ Images cannot be skewed. However, it is now possible to generate a skewed surface by using the ParallaxShapePainter Behavior.
 
 ## Games created using this extension:
 - [Falconer](https://pandako.itch.io/falconer)
