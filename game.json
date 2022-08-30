@@ -3376,7 +3376,7 @@
       "name": "ParallaxSprite",
       "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Line Hero Pack/Master/SVG/Graphic Design/Graphic Design_layers.svg",
       "shortDescription": "This extension adds a parallax effect to the sprite.",
-      "version": "0.6.0",
+      "version": "0.6.1",
       "tags": [
         "parallax"
       ],
@@ -4078,32 +4078,6 @@
                   },
                   "parameters": [
                     "CameraCenterY(\"\", 0) + (GetArgumentAsNumber(\"Y\") - CameraCenterY(\"\", 0)) * (ParallaxSprite::OriginalSizeZOrder() * ParallaxSprite::FieldOfView() / ParallaxSprite::Property(\"TemporaryZ\"))"
-                  ]
-                }
-              ]
-            },
-            {
-              "disabled": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::CompareNumbers"
-                  },
-                  "parameters": [
-                    "ParallaxSprite::CameraZ() - GetArgumentAsNumber(\"Z\")",
-                    ">",
-                    "0"
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetReturnNumber"
-                  },
-                  "parameters": [
-                    "CameraCenterY(\"\", 0) + (GetArgumentAsNumber(\"Y\") - CameraCenterY(\"\", 0)) * (ParallaxSprite::OriginalSizeZOrder() * ParallaxSprite::FieldOfView() / (ParallaxSprite::CameraZ() - GetArgumentAsNumber(\"Z\")))"
                   ]
                 }
               ]
