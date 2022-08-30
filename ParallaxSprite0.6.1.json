@@ -1,0 +1,5104 @@
+{
+  "author": "",
+  "category": "General",
+  "description": "This extension adds a parallax effect to the sprite.\nThis is not Fake 3D. Images cannot be skewed.",
+  "extensionNamespace": "",
+  "fullName": "ParallaxSprite",
+  "helpPath": "https://github.com/PANDAKO-GitHub/ParallaxSpriteExtension",
+  "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAyMy4wLjMsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iSWNvbnMiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB2aWV3Qm94PSIwIDAgMzIgMzIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMyIDMyOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+DQo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPg0KCS5zdDB7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDt9DQoJLnN0MXtmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjI7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7c3Ryb2tlLWxpbmVqb2luOnJvdW5kO30NCgkuc3Qye2ZpbGw6bm9uZTtzdHJva2U6IzAwMDAwMDtzdHJva2Utd2lkdGg6MjtzdHJva2UtbGluZWNhcDpyb3VuZDtzdHJva2UtbGluZWpvaW46cm91bmQ7c3Ryb2tlLWRhc2hhcnJheTo2LDY7fQ0KCS5zdDN7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtZGFzaGFycmF5OjQsNDt9DQoJLnN0NHtmaWxsOm5vbmU7c3Ryb2tlOiMwMDAwMDA7c3Ryb2tlLXdpZHRoOjI7c3Ryb2tlLWxpbmVjYXA6cm91bmQ7fQ0KCS5zdDV7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1kYXNoYXJyYXk6My4xMDgxLDMuMTA4MTt9DQoJDQoJCS5zdDZ7ZmlsbDpub25lO3N0cm9rZTojMDAwMDAwO3N0cm9rZS13aWR0aDoyO3N0cm9rZS1saW5lY2FwOnJvdW5kO3N0cm9rZS1saW5lam9pbjpyb3VuZDtzdHJva2UtbWl0ZXJsaW1pdDoxMDtzdHJva2UtZGFzaGFycmF5OjQsMzt9DQo8L3N0eWxlPg0KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxNiw0IDMsMTIgMTYsMjAgMjksMTIgIi8+DQo8cG9seWxpbmUgY2xhc3M9InN0MCIgcG9pbnRzPSI2LjMsMTggMywyMCAxNiwyOCAyOSwyMCAyNS44LDE4ICIvPg0KPC9zdmc+DQo=",
+  "name": "ParallaxSprite",
+  "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Line Hero Pack/Master/SVG/Graphic Design/Graphic Design_layers.svg",
+  "shortDescription": "This extension adds a parallax effect to the sprite.",
+  "version": "0.6.1",
+  "tags": [
+    "parallax"
+  ],
+  "authorIds": [
+    "Zu55H5hcb9YmZTltIVOTAFDJQyB2"
+  ],
+  "dependencies": [],
+  "eventsFunctions": [
+    {
+      "description": "",
+      "fullName": "",
+      "functionType": "Action",
+      "group": "",
+      "name": "onFirstSceneLoaded",
+      "private": false,
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "gdjs.__ParallaxSprite = {};\ngdjs.__ParallaxSprite.CameraZ = 0;\ngdjs.__ParallaxSprite.FOV = 1;\n//\ngdjs.__ParallaxSprite.TemporaryX = 0;\ngdjs.__ParallaxSprite.TemporaryY = 0;\ngdjs.__ParallaxSprite.TemporaryZ = 0;\ngdjs.__ParallaxSprite.TemporaryZoomRate = 0;",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ParallaxSprite::SetCameraZ"
+              },
+              "parameters": [
+                "",
+                "\"=\"",
+                "ParallaxSprite::OriginalSizeZOrder() * 2",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 109,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Running this event ensures that the extension is properly included in the project.\nImprovements to GDevelop in the future may eliminate the need to do this.",
+          "comment2": ""
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ParallaxSprite::SetProperty"
+              },
+              "parameters": [
+                "",
+                "\"TemporaryX\"",
+                "ParallaxSprite::Property(\"TemporaryX\")",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [],
+      "objectGroups": []
+    },
+    {
+      "description": "",
+      "fullName": "",
+      "functionType": "Action",
+      "group": "",
+      "name": "onSceneLoaded",
+      "private": false,
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ParallaxSprite::SetCameraZ"
+              },
+              "parameters": [
+                "",
+                "\"=\"",
+                "ParallaxSprite::OriginalSizeZOrder() * 2",
+                ""
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [],
+      "objectGroups": []
+    },
+    {
+      "description": "",
+      "fullName": "Set Camera Z",
+      "functionType": "Action",
+      "group": "",
+      "name": "SetCameraZ",
+      "private": false,
+      "sentence": "Set Camera Z _PARAM1_ _PARAM2_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "if (eventsFunctionContext.getArgument(\"Operator\") == \"+\") {\n    gdjs.__ParallaxSprite.CameraZ += eventsFunctionContext.getArgument(\"Value\");\n} else if (eventsFunctionContext.getArgument(\"Operator\") == \"-\") {\n    gdjs.__ParallaxSprite.CameraZ -= eventsFunctionContext.getArgument(\"Value\");\n} else if (eventsFunctionContext.getArgument(\"Operator\") == \"=\") {\n    gdjs.__ParallaxSprite.CameraZ = eventsFunctionContext.getArgument(\"Value\");\n}",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Operator",
+          "longDescription": "",
+          "name": "Operator",
+          "optional": false,
+          "supplementaryInformation": "[\"+\",\"-\",\"=\"]",
+          "type": "stringWithSelector"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Value",
+          "longDescription": "",
+          "name": "Value",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "",
+      "fullName": "Check Camera Z",
+      "functionType": "Condition",
+      "group": "",
+      "name": "CheckCameraZ",
+      "private": false,
+      "sentence": "Check Camera Z _PARAM1_ _PARAM2_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "if (eventsFunctionContext.getArgument(\"Operator\") == \"=\") {\n    eventsFunctionContext.returnValue = gdjs.__ParallaxSprite.CameraZ == eventsFunctionContext.getArgument(\"Value\");\n} else if (eventsFunctionContext.getArgument(\"Operator\") == \"<\") {\n    eventsFunctionContext.returnValue = gdjs.__ParallaxSprite.CameraZ < eventsFunctionContext.getArgument(\"Value\");\n} else if (eventsFunctionContext.getArgument(\"Operator\") == \">\") {\n    eventsFunctionContext.returnValue = gdjs.__ParallaxSprite.CameraZ > eventsFunctionContext.getArgument(\"Value\");\n}",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Operator",
+          "longDescription": "",
+          "name": "Operator",
+          "optional": false,
+          "supplementaryInformation": "[\"=\",\"<\",\">\"]",
+          "type": "stringWithSelector"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Value",
+          "longDescription": "",
+          "name": "Value",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Camera Z",
+      "fullName": "Camera Z",
+      "functionType": "Expression",
+      "group": "",
+      "name": "CameraZ",
+      "private": false,
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "eventsFunctionContext.returnValue = gdjs.__ParallaxSprite.CameraZ;",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [],
+      "objectGroups": []
+    },
+    {
+      "description": "Default : 1000",
+      "fullName": "Original Size Z Order",
+      "functionType": "Expression",
+      "group": "",
+      "name": "OriginalSizeZOrder",
+      "private": false,
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnNumber"
+              },
+              "parameters": [
+                "1000"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [],
+      "objectGroups": []
+    },
+    {
+      "description": " Set Field of View (Wide < Narrow) (Default : 1)",
+      "fullName": "Set Field of View",
+      "functionType": "Action",
+      "group": "",
+      "name": "SetFieldOfView",
+      "private": false,
+      "sentence": "Set Field of View _PARAM1_ _PARAM2_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "if (eventsFunctionContext.getArgument(\"Operator\") == \"+\") {\n    gdjs.__ParallaxSprite.FOV += eventsFunctionContext.getArgument(\"Value\");\n} else if (eventsFunctionContext.getArgument(\"Operator\") == \"-\") {\n    gdjs.__ParallaxSprite.FOV -= eventsFunctionContext.getArgument(\"Value\");\n} else if (eventsFunctionContext.getArgument(\"Operator\") == \"=\") {\n    gdjs.__ParallaxSprite.FOV = eventsFunctionContext.getArgument(\"Value\");\n}",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Operator",
+          "longDescription": "",
+          "name": "Operator",
+          "optional": false,
+          "supplementaryInformation": "[\"+\",\"-\",\"=\"]",
+          "type": "stringWithSelector"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Value",
+          "longDescription": "",
+          "name": "Value",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "",
+      "fullName": "Check Field of View",
+      "functionType": "Condition",
+      "group": "",
+      "name": "CheckFieldOfView",
+      "private": false,
+      "sentence": "Check Field of View _PARAM1_ _PARAM2_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "if (eventsFunctionContext.getArgument(\"Operator\") == \"=\") {\n    eventsFunctionContext.returnValue = gdjs.__ParallaxSprite.FOV == eventsFunctionContext.getArgument(\"Value\");\n} else if (eventsFunctionContext.getArgument(\"Operator\") == \"<\") {\n    eventsFunctionContext.returnValue = gdjs.__ParallaxSprite.FOV < eventsFunctionContext.getArgument(\"Value\");\n} else if (eventsFunctionContext.getArgument(\"Operator\") == \">\") {\n    eventsFunctionContext.returnValue = gdjs.__ParallaxSprite.FOV > eventsFunctionContext.getArgument(\"Value\");\n}",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Operator",
+          "longDescription": "",
+          "name": "Operator",
+          "optional": false,
+          "supplementaryInformation": "[\"=\",\"<\",\">\"]",
+          "type": "stringWithSelector"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Value",
+          "longDescription": "",
+          "name": "Value",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "Field of View (Wide < Narrow)",
+      "fullName": "Field of View",
+      "functionType": "Expression",
+      "group": "",
+      "name": "FieldOfView",
+      "private": false,
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "eventsFunctionContext.returnValue = gdjs.__ParallaxSprite.FOV;",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [],
+      "objectGroups": []
+    },
+    {
+      "description": "Returns the direction vector from A to B.\nSets the vector ([x,y,z]) to the specified scene variable.",
+      "fullName": "Direction vector",
+      "functionType": "Action",
+      "group": "",
+      "name": "DirectionVector",
+      "private": false,
+      "sentence": "Vector To Point From (_PARAM1_ , _PARAM2_ , _PARAM3_) To (_PARAM4_ , _PARAM5_ , _PARAM6_) in _PARAM7_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "const FromX = eventsFunctionContext.getArgument(\"FromX\");\nconst FromY = eventsFunctionContext.getArgument(\"FromY\");\nconst FromZ = eventsFunctionContext.getArgument(\"FromZ\");\nconst ToX = eventsFunctionContext.getArgument(\"ToX\");\nconst ToY = eventsFunctionContext.getArgument(\"ToY\");\nconst ToZ = eventsFunctionContext.getArgument(\"ToZ\");\nconst VN = eventsFunctionContext.getArgument(\"SceneVariableName\");\n//\nif (VN == \"\") {return}\n//\nconst XX = ToX - FromX;\nconst YY = ToY - FromY;\nconst ZZ = ToZ - FromZ;\n//\nlet Length = Math.sqrt((XX * XX) + (YY * YY) + (ZZ * ZZ));\nif(Length > 0) {Length = 1 / Length}\n//\nconst SV = runtimeScene.getVariables().get(VN);\nconst SVX = SV.getChildAt(0);\nconst SVY = SV.getChildAt(1);\nconst SVZ = SV.getChildAt(2);\nSVX.setNumber(XX * Length);\nSVY.setNumber(YY * Length);\nSVZ.setNumber(ZZ * Length);",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": true
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "From X",
+          "longDescription": "",
+          "name": "FromX",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "From Y",
+          "longDescription": "",
+          "name": "FromY",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "From Z",
+          "longDescription": "",
+          "name": "FromZ",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "To X",
+          "longDescription": "",
+          "name": "ToX",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "To Y",
+          "longDescription": "",
+          "name": "ToY",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "To Z",
+          "longDescription": "",
+          "name": "ToZ",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Scene Variable Name",
+          "longDescription": "",
+          "name": "SceneVariableName",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "string"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "",
+      "fullName": "Distance",
+      "functionType": "Expression",
+      "group": "",
+      "name": "Distance",
+      "private": false,
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "const FromX = eventsFunctionContext.getArgument(\"FromX\");\nconst FromY = eventsFunctionContext.getArgument(\"FromY\");\nconst FromZ = eventsFunctionContext.getArgument(\"FromZ\");\nconst ToX = eventsFunctionContext.getArgument(\"ToX\");\nconst ToY = eventsFunctionContext.getArgument(\"ToY\");\nconst ToZ = eventsFunctionContext.getArgument(\"ToZ\");\n//\nconst XX = ToX - FromX;\nconst YY = ToY - FromY;\nconst ZZ = ToZ - FromZ;\n//\nlet Length = Math.sqrt((XX * XX) + (YY * YY) + (ZZ * ZZ));\nif(Length > 0) {Length = 1 / Length}\neventsFunctionContext.returnValue = Length;",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "From X",
+          "longDescription": "",
+          "name": "FromX",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "From Y",
+          "longDescription": "",
+          "name": "FromY",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "From Z",
+          "longDescription": "",
+          "name": "FromZ",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "To X",
+          "longDescription": "",
+          "name": "ToX",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "To Y",
+          "longDescription": "",
+          "name": "ToY",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "To Z",
+          "longDescription": "",
+          "name": "ToZ",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "",
+      "fullName": "Projection X",
+      "functionType": "Expression",
+      "group": "",
+      "name": "ProjectionX",
+      "private": false,
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ParallaxSprite::SetProperty"
+              },
+              "parameters": [
+                "",
+                "\"TemporaryZ\"",
+                "ParallaxSprite::CameraZ() - GetArgumentAsNumber(\"Z\")",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 109,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "If the point is behind the camera, an approximation is returned. This is not an exact value.",
+          "comment2": ""
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "ParallaxSprite::Property(\"TemporaryZ\")",
+                "<=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ParallaxSprite::SetProperty"
+              },
+              "parameters": [
+                "",
+                "\"TemporaryZ\"",
+                "1 / ParallaxSprite::OriginalSizeZOrder()",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnNumber"
+              },
+              "parameters": [
+                "CameraCenterX(\"\", 0) + (GetArgumentAsNumber(\"X\") - CameraCenterX(\"\", 0)) * (ParallaxSprite::OriginalSizeZOrder() * ParallaxSprite::FieldOfView() / ParallaxSprite::Property(\"TemporaryZ\"))"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "X",
+          "longDescription": "",
+          "name": "X",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Y",
+          "longDescription": "",
+          "name": "Y",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Z",
+          "longDescription": "",
+          "name": "Z",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "",
+      "fullName": "Projection Y",
+      "functionType": "Expression",
+      "group": "",
+      "name": "ProjectionY",
+      "private": false,
+      "sentence": "",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "ParallaxSprite::SetProperty"
+              },
+              "parameters": [
+                "",
+                "\"TemporaryZ\"",
+                "ParallaxSprite::CameraZ() - GetArgumentAsNumber(\"Z\")",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 109,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "If the point is behind the camera, an approximation is returned. This is not an exact value.",
+          "comment2": ""
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::CompareNumbers"
+              },
+              "parameters": [
+                "ParallaxSprite::Property(\"TemporaryZ\")",
+                "<=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ParallaxSprite::SetProperty"
+              },
+              "parameters": [
+                "",
+                "\"TemporaryZ\"",
+                "1 / ParallaxSprite::OriginalSizeZOrder()",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "SetReturnNumber"
+              },
+              "parameters": [
+                "CameraCenterY(\"\", 0) + (GetArgumentAsNumber(\"Y\") - CameraCenterY(\"\", 0)) * (ParallaxSprite::OriginalSizeZOrder() * ParallaxSprite::FieldOfView() / ParallaxSprite::Property(\"TemporaryZ\"))"
+              ]
+            }
+          ]
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "X",
+          "longDescription": "",
+          "name": "X",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Y",
+          "longDescription": "",
+          "name": "Y",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Z",
+          "longDescription": "",
+          "name": "Z",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "",
+      "fullName": "Set Property",
+      "functionType": "Action",
+      "group": "",
+      "name": "SetProperty",
+      "private": true,
+      "sentence": "Set Property _PARAM1_ _PARAM2_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "gdjs.__ParallaxSprite[eventsFunctionContext.getArgument(\"PropertyName\")] = eventsFunctionContext.getArgument(\"Value\");",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Property Name",
+          "longDescription": "",
+          "name": "PropertyName",
+          "optional": false,
+          "supplementaryInformation": "[\"TemporaryX\",\"TemporaryY\",\"TemporaryZ\",\"TemporaryZoomRate\"]",
+          "type": "stringWithSelector"
+        },
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Value",
+          "longDescription": "",
+          "name": "Value",
+          "optional": false,
+          "supplementaryInformation": "",
+          "type": "expression"
+        }
+      ],
+      "objectGroups": []
+    },
+    {
+      "description": "",
+      "fullName": "Property",
+      "functionType": "Expression",
+      "group": "",
+      "name": "Property",
+      "private": true,
+      "sentence": "Set Property _PARAM1_ _PARAM2_",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::JsCode",
+          "inlineCode": "eventsFunctionContext.returnValue = gdjs.__ParallaxSprite[eventsFunctionContext.getArgument(\"PropertyName\")];",
+          "parameterObjects": "",
+          "useStrict": true,
+          "eventsSheetExpanded": false
+        }
+      ],
+      "parameters": [
+        {
+          "codeOnly": false,
+          "defaultValue": "",
+          "description": "Property Name",
+          "longDescription": "",
+          "name": "PropertyName",
+          "optional": false,
+          "supplementaryInformation": "[\"TemporaryX\",\"TemporaryY\",\"TemporaryZ\",\"TemporaryZoomRate\"]",
+          "type": "stringWithSelector"
+        }
+      ],
+      "objectGroups": []
+    }
+  ],
+  "eventsBasedBehaviors": [
+    {
+      "description": "",
+      "fullName": "ParallaxSprite",
+      "name": "ParallaxSprite",
+      "objectType": "Sprite",
+      "eventsFunctions": [
+        {
+          "description": "",
+          "fullName": "",
+          "functionType": "Action",
+          "group": "",
+          "name": "doStepPreEvents",
+          "private": false,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "For sprites generated by the editor",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyFirstFrame"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::ApplyToParallaxXYZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "",
+          "functionType": "Action",
+          "group": "",
+          "name": "doStepPostEvents",
+          "private": false,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "For sprites generated by events",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyFirstFrame"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::ApplyToParallaxXYZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "ParallaxSprite::CameraZ() - Object.Behavior::Z()",
+                    "!=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::SetPropertyZoomRate"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "ParallaxSprite::OriginalSizeZOrder() * ParallaxSprite::FieldOfView() / (ParallaxSprite::CameraZ() - Object.Behavior::Z())"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Approximate if 0",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "ParallaxSprite::CameraZ() - Object.Behavior::Z()",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::SetPropertyZoomRate"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "ParallaxSprite::OriginalSizeZOrder() * ParallaxSprite::FieldOfView() / (1 / ParallaxSprite::OriginalSizeZOrder())\n"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "=",
+                    "CameraCenterX(\"\", 0) + (Object.Behavior::PropertyX() - CameraCenterX(\"\", 0)) * Object.Behavior::PropertyZoomRate()",
+                    "=",
+                    "CameraCenterY(\"\", 0) + (Object.Behavior::PropertyY() - CameraCenterY(\"\", 0)) * Object.Behavior::PropertyZoomRate()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeScale"
+                  },
+                  "parameters": [
+                    "Object",
+                    "=",
+                    "Object.Behavior::PropertyZoomRate() * Object.Behavior::PropertyScaleFactor()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "Object",
+                    "=",
+                    "ParallaxSprite::Distance(CameraCenterX(\"\",0), CameraCenterY(\"\",0), ParallaxSprite::CameraZ(), Object.Behavior::X(), Object.Behavior::Y(), Object.Behavior::Z())"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Set X",
+          "functionType": "Action",
+          "group": "",
+          "name": "SetX",
+          "private": false,
+          "sentence": "Set X _PARAM0_ _PARAM2_ _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"+\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::SetPropertyX"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "+",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"-\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::SetPropertyX"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "-",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"=\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::SetPropertyX"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Operator",
+              "longDescription": "",
+              "name": "Operator",
+              "optional": false,
+              "supplementaryInformation": "[\"+\",\"-\",\"=\"]",
+              "type": "stringWithSelector"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Value",
+              "longDescription": "",
+              "name": "Value",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Set Y",
+          "functionType": "Action",
+          "group": "",
+          "name": "SetY",
+          "private": false,
+          "sentence": "Set Y _PARAM0_ _PARAM2_ _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"+\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::SetPropertyY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "+",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"-\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::SetPropertyY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "-",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"=\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::SetPropertyY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "",
+              "longDescription": "",
+              "name": "Operator",
+              "optional": false,
+              "supplementaryInformation": "[\"+\",\"-\",\"=\"]",
+              "type": "stringWithSelector"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Value",
+              "longDescription": "",
+              "name": "Value",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Set Z",
+          "functionType": "Action",
+          "group": "",
+          "name": "SetZ",
+          "private": false,
+          "sentence": "Set Z _PARAM0_ _PARAM2_ _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"+\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::SetPropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "+",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"-\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::SetPropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "-",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"=\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::SetPropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "",
+              "longDescription": "",
+              "name": "Operator",
+              "optional": false,
+              "supplementaryInformation": "[\"+\",\"-\",\"=\"]",
+              "type": "stringWithSelector"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Value",
+              "longDescription": "",
+              "name": "Value",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Apply To Parallax XYZ",
+          "functionType": "Action",
+          "group": "",
+          "name": "ApplyToParallaxXYZ",
+          "private": false,
+          "sentence": "Apply To Parallax XYZ _PARAM0_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::SetPropertyX"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "Object.X()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::SetPropertyY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "Object.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::SetPropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "Object.ZOrder()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::SetPropertyFirstFrame"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "no"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "X",
+          "fullName": "X",
+          "functionType": "Expression",
+          "group": "",
+          "name": "X",
+          "private": false,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertyX()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Y",
+          "fullName": "Y",
+          "functionType": "Expression",
+          "group": "",
+          "name": "Y",
+          "private": false,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertyY()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Z",
+          "fullName": "Z",
+          "functionType": "Expression",
+          "group": "",
+          "name": "Z",
+          "private": false,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertyZ()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "ZoomRate",
+          "fullName": "ZoomRate",
+          "functionType": "Expression",
+          "group": "",
+          "name": "ZoomRate",
+          "private": false,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertyZoomRate()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Check X",
+          "functionType": "Condition",
+          "group": "",
+          "name": "CheckX",
+          "private": false,
+          "sentence": "Check X _PARAM0_ _PARAM2_ _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"=\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyX"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"<\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyX"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "<",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\">\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyX"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ">",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "",
+              "longDescription": "",
+              "name": "Operator",
+              "optional": false,
+              "supplementaryInformation": "[\"=\",\"<\",\">\"]",
+              "type": "stringWithSelector"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Value",
+              "longDescription": "",
+              "name": "Value",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Check Y",
+          "functionType": "Condition",
+          "group": "",
+          "name": "CheckY",
+          "private": false,
+          "sentence": "Check Y _PARAM0_ _PARAM2_ _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"=\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"<\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "<",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\">\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ">",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "",
+              "longDescription": "",
+              "name": "Operator",
+              "optional": false,
+              "supplementaryInformation": "[\"=\",\"<\",\">\"]",
+              "type": "stringWithSelector"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Value",
+              "longDescription": "",
+              "name": "Value",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Check Z",
+          "functionType": "Condition",
+          "group": "",
+          "name": "CheckZ",
+          "private": false,
+          "sentence": "Check Z _PARAM0_ _PARAM2_ _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"=\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"<\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "<",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\">\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ">",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "",
+              "longDescription": "",
+              "name": "Operator",
+              "optional": false,
+              "supplementaryInformation": "[\"=\",\"<\",\">\"]",
+              "type": "stringWithSelector"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Value",
+              "longDescription": "",
+              "name": "Value",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Check Zoom Rate",
+          "functionType": "Condition",
+          "group": "",
+          "name": "CheckZoomRate",
+          "private": false,
+          "sentence": "Check Zoom Rate _PARAM0_ _PARAM2_ _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"=\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyZoomRate"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"<\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyZoomRate"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "<",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\">\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyZoomRate"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ">",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "",
+              "longDescription": "",
+              "name": "Operator",
+              "optional": false,
+              "supplementaryInformation": "[\"=\",\"<\",\">\"]",
+              "type": "stringWithSelector"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Value",
+              "longDescription": "",
+              "name": "Value",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Check Z Difference",
+          "functionType": "Condition",
+          "group": "",
+          "name": "CheckZDifference",
+          "private": false,
+          "sentence": "Check Z Difference _PARAM0_ _PARAM2_ _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "<=",
+                    "GetArgumentAsNumber(\"Z\") + GetArgumentAsNumber(\"Range\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ">=",
+                    "GetArgumentAsNumber(\"Z\") - GetArgumentAsNumber(\"Range\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Z Order",
+              "longDescription": "",
+              "name": "Z",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Range",
+              "longDescription": "",
+              "name": "Range",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Check Z Front Difference",
+          "functionType": "Condition",
+          "group": "",
+          "name": "CheckZFrontDifference",
+          "private": false,
+          "sentence": "Check if _PARAM0_ is within _PARAM3_ front _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "<=",
+                    "GetArgumentAsNumber(\"Z\") + GetArgumentAsNumber(\"Range\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ">=",
+                    "GetArgumentAsNumber(\"Z\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Z Order",
+              "longDescription": "",
+              "name": "Z",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Range",
+              "longDescription": "",
+              "name": "Range",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Check Z Behind Difference",
+          "functionType": "Condition",
+          "group": "",
+          "name": "CheckZBehindDifference",
+          "private": false,
+          "sentence": "Check if _PARAM0_ is within _PARAM3_ behind _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "<=",
+                    "GetArgumentAsNumber(\"Z\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ">=",
+                    "GetArgumentAsNumber(\"Z\") - GetArgumentAsNumber(\"Range\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Z Order",
+              "longDescription": "",
+              "name": "Z",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Range",
+              "longDescription": "",
+              "name": "Range",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Is Not First Frame",
+          "functionType": "Condition",
+          "group": "",
+          "name": "IsNotFirstFrame",
+          "private": false,
+          "sentence": "_PARAM0_ Is Not First Frame",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "ParallaxSprite::ParallaxSprite::PropertyFirstFrame"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "Sprite",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxSprite",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "propertyDescriptors": [
+        {
+          "value": "0",
+          "type": "Number",
+          "label": "X",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "X"
+        },
+        {
+          "value": "0",
+          "type": "Number",
+          "label": "Y",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "Y"
+        },
+        {
+          "value": "0",
+          "type": "Number",
+          "label": "Z",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "Z"
+        },
+        {
+          "value": "100",
+          "type": "Number",
+          "label": "",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "ZoomRate"
+        },
+        {
+          "value": "true",
+          "type": "Boolean",
+          "label": "",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "FirstFrame"
+        },
+        {
+          "value": "1",
+          "type": "Number",
+          "label": "Scale Factor (Default : 1)",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": false,
+          "name": "ScaleFactor"
+        }
+      ]
+    },
+    {
+      "description": "",
+      "fullName": "ParallaxShapePainter",
+      "name": "ParallaxShapePainter",
+      "objectType": "PrimitiveDrawing::Drawer",
+      "eventsFunctions": [
+        {
+          "description": "",
+          "fullName": "",
+          "functionType": "Action",
+          "group": "",
+          "name": "doStepPreEvents",
+          "private": false,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "For sprites generated by the editor",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyFirstFrame"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::ApplyToParallaxXYZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "",
+          "functionType": "Action",
+          "group": "",
+          "name": "doStepPostEvents",
+          "private": false,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "For sprites generated by events",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyFirstFrame"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::ApplyToParallaxXYZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "ParallaxSprite::CameraZ() - Object.Behavior::Z()",
+                    "!=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::SetPropertyZoomRate"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "ParallaxSprite::OriginalSizeZOrder() * ParallaxSprite::FieldOfView() / (ParallaxSprite::CameraZ() - Object.Behavior::Z())"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Approximate if 0",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareNumbers"
+                  },
+                  "parameters": [
+                    "ParallaxSprite::CameraZ() - Object.Behavior::Z()",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::SetPropertyZoomRate"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "ParallaxSprite::OriginalSizeZOrder() * ParallaxSprite::FieldOfView() / (1 / ParallaxSprite::OriginalSizeZOrder())"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "MettreXY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "=",
+                    "CameraCenterX(\"\", 0) + (Object.Behavior::PropertyX() - CameraCenterX(\"\", 0)) * Object.Behavior::PropertyZoomRate()",
+                    "=",
+                    "CameraCenterY(\"\", 0) + (Object.Behavior::PropertyY() - CameraCenterY(\"\", 0)) * Object.Behavior::PropertyZoomRate()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangePlan"
+                  },
+                  "parameters": [
+                    "Object",
+                    "=",
+                    "ParallaxSprite::Distance(CameraCenterX(\"\",0), CameraCenterY(\"\",0), ParallaxSprite::CameraZ(), Object.Behavior::X(), Object.Behavior::Y(), Object.Behavior::Z())"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Draw",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Object",
+                    "__ParallaxShapePainter.DrawCounterGroup",
+                    "=",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Repeat",
+              "repeatExpression": "Object.VariableChildCount(__ParallaxShapePainter.DrawPoints)",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ModVarObjet"
+                  },
+                  "parameters": [
+                    "Object",
+                    "__ParallaxShapePainter.DrawCounterNumber",
+                    "=",
+                    "0"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "Object.VariableChildCount(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounterGroup)])",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Object",
+                        "__ParallaxShapePainter.TemporaryX",
+                        "=",
+                        "Object. Behavior::PropertyX() + Object.Variable(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounterGroup)][Object.Variable(__ParallaxShapePainter.DrawCounterNumber)].X)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Object",
+                        "__ParallaxShapePainter.TemporaryY",
+                        "=",
+                        "Object. Behavior::PropertyY() + Object.Variable(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounterGroup)][Object.Variable(__ParallaxShapePainter.DrawCounterNumber)].Y)"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Object",
+                        "__ParallaxShapePainter.TemporaryZ",
+                        "=",
+                        "Object. Behavior::PropertyZ() + Object.Variable(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounterGroup)][Object.Variable(__ParallaxShapePainter.DrawCounterNumber)].Z)"
+                      ]
+                    }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "Object",
+                            "__ParallaxShapePainter.DrawCounterNumber",
+                            "=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::FillColor"
+                          },
+                          "parameters": [
+                            "Object",
+                            "Object.VariableString(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounterGroup)][Object.Variable(__ParallaxShapePainter.DrawCounterNumber)].C)"
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::BeginFillPath"
+                          },
+                          "parameters": [
+                            "Object",
+                            "ParallaxSprite::ProjectionX(Object.Variable(__ParallaxShapePainter.TemporaryX), Object.Variable(__ParallaxShapePainter.TemporaryY), Object.Variable(__ParallaxShapePainter.TemporaryZ))",
+                            "ParallaxSprite::ProjectionY(Object.Variable(__ParallaxShapePainter.TemporaryX), Object.Variable(__ParallaxShapePainter.TemporaryY), Object.Variable(__ParallaxShapePainter.TemporaryZ))"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "VarObjet"
+                          },
+                          "parameters": [
+                            "Object",
+                            "__ParallaxShapePainter.DrawCounterNumber",
+                            "!=",
+                            "0"
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PrimitiveDrawing::PathLineTo"
+                          },
+                          "parameters": [
+                            "Object",
+                            "ParallaxSprite::ProjectionX(Object.Variable(__ParallaxShapePainter.TemporaryX), Object.Variable(__ParallaxShapePainter.TemporaryY), Object.Variable(__ParallaxShapePainter.TemporaryZ))",
+                            "ParallaxSprite::ProjectionY(Object.Variable(__ParallaxShapePainter.TemporaryX), Object.Variable(__ParallaxShapePainter.TemporaryY), Object.Variable(__ParallaxShapePainter.TemporaryZ))"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "ModVarObjet"
+                          },
+                          "parameters": [
+                            "Object",
+                            "__ParallaxShapePainter.DrawCounterNumber",
+                            "+",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ModVarObjet"
+                      },
+                      "parameters": [
+                        "Object",
+                        "__ParallaxShapePainter.DrawCounterGroup",
+                        "+",
+                        "1"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PrimitiveDrawing::EndFillPath"
+                  },
+                  "parameters": [
+                    "Object"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Set X",
+          "functionType": "Action",
+          "group": "",
+          "name": "SetX",
+          "private": false,
+          "sentence": "Set X _PARAM0_ _PARAM2_ _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"+\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::SetPropertyX"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "+",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"-\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::SetPropertyX"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "-",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"=\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::SetPropertyX"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Operator",
+              "longDescription": "",
+              "name": "Operator",
+              "optional": false,
+              "supplementaryInformation": "[\"+\",\"-\",\"=\"]",
+              "type": "stringWithSelector"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Value",
+              "longDescription": "",
+              "name": "Value",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Set Y",
+          "functionType": "Action",
+          "group": "",
+          "name": "SetY",
+          "private": false,
+          "sentence": "Set Y _PARAM0_ _PARAM2_ _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"+\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::SetPropertyY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "+",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"-\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::SetPropertyY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "-",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"=\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::SetPropertyY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "",
+              "longDescription": "",
+              "name": "Operator",
+              "optional": false,
+              "supplementaryInformation": "[\"+\",\"-\",\"=\"]",
+              "type": "stringWithSelector"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Value",
+              "longDescription": "",
+              "name": "Value",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Set Z",
+          "functionType": "Action",
+          "group": "",
+          "name": "SetZ",
+          "private": false,
+          "sentence": "Set Z _PARAM0_ _PARAM2_ _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"+\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::SetPropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "+",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"-\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::SetPropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "-",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"=\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::SetPropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "",
+              "longDescription": "",
+              "name": "Operator",
+              "optional": false,
+              "supplementaryInformation": "[\"+\",\"-\",\"=\"]",
+              "type": "stringWithSelector"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Value",
+              "longDescription": "",
+              "name": "Value",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Apply To Parallax XYZ",
+          "functionType": "Action",
+          "group": "",
+          "name": "ApplyToParallaxXYZ",
+          "private": false,
+          "sentence": "Apply To Parallax XYZ _PARAM0_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::SetPropertyX"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "Object.X()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::SetPropertyY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "Object.Y()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::SetPropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "Object.ZOrder()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::SetPropertyFirstFrame"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "no"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Shape Painter Settings",
+              "comment2": ""
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PrimitiveDrawing::UseRelativeCoordinates"
+                  },
+                  "parameters": [
+                    "Object",
+                    "no"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PrimitiveDrawing::ClearBetweenFrames"
+                  },
+                  "parameters": [
+                    "Object",
+                    "yes"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "X",
+          "fullName": "X",
+          "functionType": "Expression",
+          "group": "",
+          "name": "X",
+          "private": false,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertyX()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Y",
+          "fullName": "Y",
+          "functionType": "Expression",
+          "group": "",
+          "name": "Y",
+          "private": false,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertyY()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Z",
+          "fullName": "Z",
+          "functionType": "Expression",
+          "group": "",
+          "name": "Z",
+          "private": false,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertyZ()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "ZoomRate",
+          "fullName": "ZoomRate",
+          "functionType": "Expression",
+          "group": "",
+          "name": "ZoomRate",
+          "private": false,
+          "sentence": "",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnNumber"
+                  },
+                  "parameters": [
+                    "Object.Behavior::PropertyZoomRate()"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Check X",
+          "functionType": "Condition",
+          "group": "",
+          "name": "CheckX",
+          "private": false,
+          "sentence": "Check X _PARAM0_ _PARAM2_ _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"=\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyX"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"<\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyX"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "<",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\">\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyX"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ">",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "",
+              "longDescription": "",
+              "name": "Operator",
+              "optional": false,
+              "supplementaryInformation": "[\"=\",\"<\",\">\"]",
+              "type": "stringWithSelector"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Value",
+              "longDescription": "",
+              "name": "Value",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Check Y",
+          "functionType": "Condition",
+          "group": "",
+          "name": "CheckY",
+          "private": false,
+          "sentence": "Check Y _PARAM0_ _PARAM2_ _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"=\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"<\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "<",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\">\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyY"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ">",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "",
+              "longDescription": "",
+              "name": "Operator",
+              "optional": false,
+              "supplementaryInformation": "[\"=\",\"<\",\">\"]",
+              "type": "stringWithSelector"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Value",
+              "longDescription": "",
+              "name": "Value",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Check Z",
+          "functionType": "Condition",
+          "group": "",
+          "name": "CheckZ",
+          "private": false,
+          "sentence": "Check Z _PARAM0_ _PARAM2_ _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"=\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"<\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "<",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\">\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ">",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "",
+              "longDescription": "",
+              "name": "Operator",
+              "optional": false,
+              "supplementaryInformation": "[\"=\",\"<\",\">\"]",
+              "type": "stringWithSelector"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Value",
+              "longDescription": "",
+              "name": "Value",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Check Zoom Rate",
+          "functionType": "Condition",
+          "group": "",
+          "name": "CheckZoomRate",
+          "private": false,
+          "sentence": "Check Zoom Rate _PARAM0_ _PARAM2_ _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"=\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyZoomRate"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "=",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\"<\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyZoomRate"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "<",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::CompareStrings"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"Operator\")",
+                    "=",
+                    "\">\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyZoomRate"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ">",
+                    "GetArgumentAsNumber(\"Value\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "",
+              "longDescription": "",
+              "name": "Operator",
+              "optional": false,
+              "supplementaryInformation": "[\"=\",\"<\",\">\"]",
+              "type": "stringWithSelector"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Value",
+              "longDescription": "",
+              "name": "Value",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Check Z Difference",
+          "functionType": "Condition",
+          "group": "",
+          "name": "CheckZDifference",
+          "private": false,
+          "sentence": "Check Z Difference _PARAM0_ _PARAM2_ _PARAM3_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "<=",
+                    "GetArgumentAsNumber(\"Z\") + GetArgumentAsNumber(\"Range\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ">=",
+                    "GetArgumentAsNumber(\"Z\") - GetArgumentAsNumber(\"Range\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Z Order",
+              "longDescription": "",
+              "name": "Z",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Range",
+              "longDescription": "",
+              "name": "Range",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Check Z Front Difference",
+          "functionType": "Condition",
+          "group": "",
+          "name": "CheckZFrontDifference",
+          "private": false,
+          "sentence": "Check if _PARAM0_ is within _PARAM3_ front _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "<=",
+                    "GetArgumentAsNumber(\"Z\") + GetArgumentAsNumber(\"Range\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ">=",
+                    "GetArgumentAsNumber(\"Z\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Z Order",
+              "longDescription": "",
+              "name": "Z",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Range",
+              "longDescription": "",
+              "name": "Range",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Check Z Behind Difference",
+          "functionType": "Condition",
+          "group": "",
+          "name": "CheckZBehindDifference",
+          "private": false,
+          "sentence": "Check if _PARAM0_ is within _PARAM3_ behind _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    "<=",
+                    "GetArgumentAsNumber(\"Z\")"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyZ"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior",
+                    ">=",
+                    "GetArgumentAsNumber(\"Z\") - GetArgumentAsNumber(\"Range\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Z Order",
+              "longDescription": "",
+              "name": "Z",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Range",
+              "longDescription": "",
+              "name": "Range",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "expression"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "",
+          "fullName": "Is Not First Frame",
+          "functionType": "Condition",
+          "group": "",
+          "name": "IsNotFirstFrame",
+          "private": false,
+          "sentence": "_PARAM0_ Is Not First Frame",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "ParallaxSprite::ParallaxShapePainter::PropertyFirstFrame"
+                  },
+                  "parameters": [
+                    "Object",
+                    "Behavior"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetReturnBoolean"
+                  },
+                  "parameters": [
+                    "True"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            }
+          ],
+          "objectGroups": []
+        },
+        {
+          "description": "Set relative coordinates based on the object's position.\nJSON example :\n\"[\n[\n{\\\"X\\\":-10, \\\"Y\\\":-10 , \\\"Z\\\":0, \\\"C\\\":\\\"255;255;255\\\"},\n{\\\"X\\\":10, \\\"Y\\\":-10 , \\\"Z\\\":0},\n{\\\"X\\\":10, \\\"Y\\\":10 , \\\"Z\\\":0},\n{\\\"X\\\":-10, \\\"Y\\\":10 , \\\"Z\\\":0}\n]\n]\"",
+          "fullName": "Set Draw Points",
+          "functionType": "Action",
+          "group": "",
+          "name": "SetDrawPoints",
+          "private": false,
+          "sentence": "Set Draw Points _PARAM0_ _PARAM2_",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "JSONToObjectVariableStructure"
+                  },
+                  "parameters": [
+                    "GetArgumentAsString(\"JSON\")",
+                    "Object",
+                    "__ParallaxShapePainter.DrawPoints"
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": [
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Object",
+              "longDescription": "",
+              "name": "Object",
+              "optional": false,
+              "supplementaryInformation": "PrimitiveDrawing::Drawer",
+              "type": "object"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "Behavior",
+              "longDescription": "",
+              "name": "Behavior",
+              "optional": false,
+              "supplementaryInformation": "ParallaxSprite::ParallaxShapePainter",
+              "type": "behavior"
+            },
+            {
+              "codeOnly": false,
+              "defaultValue": "",
+              "description": "JSON",
+              "longDescription": "",
+              "name": "JSON",
+              "optional": false,
+              "supplementaryInformation": "",
+              "type": "string"
+            }
+          ],
+          "objectGroups": []
+        }
+      ],
+      "propertyDescriptors": [
+        {
+          "value": "0",
+          "type": "Number",
+          "label": "",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "X"
+        },
+        {
+          "value": "0",
+          "type": "Number",
+          "label": "",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "Y"
+        },
+        {
+          "value": "0",
+          "type": "Number",
+          "label": "",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "Z"
+        },
+        {
+          "value": "100",
+          "type": "Number",
+          "label": "",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "ZoomRate"
+        },
+        {
+          "value": "true",
+          "type": "Boolean",
+          "label": "",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "FirstFrame"
+        },
+        {
+          "value": "1",
+          "type": "Number",
+          "label": "Scale Factor (Default : 1)",
+          "description": "",
+          "group": "",
+          "extraInformation": [],
+          "hidden": true,
+          "name": "ScaleFactor"
+        }
+      ]
+    }
+  ]
+}
