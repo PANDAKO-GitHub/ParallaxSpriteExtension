@@ -19,6 +19,10 @@ By doing so, we will be able to submit this extension to GDevelop.
 This extension does not support camera rotation. The reason is that enabling rotation makes the controls more complex and increases the load.
 
 ## Release notes
+### v0.6.2
+- Added "Load ParallaxSprite Extension" action.
+- Added skip drawing process if the object with "ParallaxShapePainter" behavior is not visible.
+
 ### v0.6.0
 This version of the "ParallaxShapePainter" behavior is not compatible with previous versions.
 - "ParallaxShapePainter" behavior now supports multiple draws.
