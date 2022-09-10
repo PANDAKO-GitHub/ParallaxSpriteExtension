@@ -3366,7 +3366,7 @@
     {
       "author": "",
       "category": "General",
-      "description": "This extension adds a parallax effect to the sprite.\nThis is not Fake 3D. Images cannot be skewed.",
+      "description": "This extension adds a parallax effect to the sprite.  \nThis is not Fake 3D. Images cannot be skewed. Images cannot be skewed. However, it is now possible to generate a skewed surface by using the ParallaxShapePainter Behavior.",
       "extensionNamespace": "",
       "fullName": "ParallaxSprite",
       "helpPath": "https://github.com/PANDAKO-GitHub/ParallaxSpriteExtension",
@@ -3374,7 +3374,7 @@
       "name": "ParallaxSprite",
       "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/Line Hero Pack/Master/SVG/Graphic Design/Graphic Design_layers.svg",
       "shortDescription": "This extension adds a parallax effect to the sprite.",
-      "version": "0.6.2",
+      "version": "0.6.3",
       "tags": [
         "parallax"
       ],
@@ -6493,7 +6493,7 @@
                                 "Object",
                                 "__ParallaxShapePainter.TemporaryX",
                                 "=",
-                                "Object. Behavior::PropertyX() + Object.Variable(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounterGroup)][Object.Variable(__ParallaxShapePainter.DrawCounterNumber)].X)"
+                                "Object.Behavior::PropertyX() + Object.Variable(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounterGroup)][Object.Variable(__ParallaxShapePainter.DrawCounterNumber)].X)"
                               ]
                             },
                             {
@@ -6504,7 +6504,7 @@
                                 "Object",
                                 "__ParallaxShapePainter.TemporaryY",
                                 "=",
-                                "Object. Behavior::PropertyY() + Object.Variable(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounterGroup)][Object.Variable(__ParallaxShapePainter.DrawCounterNumber)].Y)"
+                                "Object.Behavior::PropertyY() + Object.Variable(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounterGroup)][Object.Variable(__ParallaxShapePainter.DrawCounterNumber)].Y)"
                               ]
                             },
                             {
@@ -6515,7 +6515,7 @@
                                 "Object",
                                 "__ParallaxShapePainter.TemporaryZ",
                                 "=",
-                                "Object. Behavior::PropertyZ() + Object.Variable(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounterGroup)][Object.Variable(__ParallaxShapePainter.DrawCounterNumber)].Z)"
+                                "Object.Behavior::PropertyZ() + Object.Variable(__ParallaxShapePainter.DrawPoints[Object.Variable(__ParallaxShapePainter.DrawCounterGroup)][Object.Variable(__ParallaxShapePainter.DrawCounterNumber)].Z)"
                               ]
                             }
                           ],
