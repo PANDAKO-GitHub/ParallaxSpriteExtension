@@ -11,14 +11,15 @@ Please suggest a better description, sentence and function name for this extensi
 By doing so, we will be able to submit this extension to GDevelop.
 
 ## How to use
-Import the downloaded "ParallaxSprite0.0.0.json" file into your project.
+Import the downloaded "ParallaxSprite0.0.0.json" file into your project.  
+This repository is an example project. Download it in ZIP and open game.json in GDevelop.
 
 ## FAQ
 **Q1** : I saw a video of you rotating the camera on your Twitter. Is it even possible with this extension?
 
 **A1** : No.  
 This extension does not support camera rotation. The reason is that enabling rotation makes the controls more complex and increases the load.  
-What you are looking for may be "[WithThreeJs Extension for GDevelop](../WithThreeJsExtension)".
+What you are looking for may be "[WithThreeJs Extension for GDevelop](https://github.com/PANDAKO-GitHub/WithThreeJsExtension)".
 
 ## Release notes
 ### v0.6.3
