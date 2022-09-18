@@ -19,7 +19,7 @@ This repository is an example project. Download it in ZIP and open game.json in 
 
 **A1** : No.  
 This extension does not support camera rotation. The reason is that enabling rotation makes the controls more complex and increases the load.  
-What you are looking for may be "[WithThreeJs Extension for GDevelop](https://github.com/PANDAKO-GitHub/WithThreeJsExtension)".
+What you are looking for may be "WithThreeJs Extension for GDevelop (Coming soon)".
 
 ## Release notes
 ### v0.6.3
